@@ -25,7 +25,7 @@ $\bar{xy} \equiv \frac{1}{n} \sum_{j=1}^n x_j y_j$.
 ## [2 points] $P$-values
 
 + In your own words, explain what a $P$-value is (not how to calculate it: what it means).
-    - A $P$-Value, in simple terms, is the probability that the value of a given test statistic is as large or larger than what the value of that test statistic would be under the null hypothesis.
+    - A $P$-Value, in simple terms, is the probability that the value of a given test statistic is as large or larger than what the value of that test statistic would be under the null hypothesis. Essentially it is the probability we see the data we are seeing given the null hypothesis holds
 + Suppose that the $P$-value is 0.04. What does that mean about the null hypothesis?
     - A very low $P$-value is indicative of a rejection of the null hypothesis, as it states that the probability of the observed data aligning with the null is very low, as the observed data allows us to assemble test statistics which we then can compare against the null. A test with an outcome like this can be deemed "statistically significant"
 
@@ -58,7 +58,7 @@ You should be reasonably comfortable with most of the material in that overview 
 
 As proof of work, include an image such as the one below in your repo, that shows how in your own hub directory you have the right repository cloned and some of the files in it (this is taken from my account in the Hub):
 
-![](stat159HW1Q4.JPG)
+![](Pictures/stat159HW1Q4.JPG)
 
 
 ## [5 points ] Git Practice: collaborating with yourself
