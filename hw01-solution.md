@@ -58,7 +58,7 @@ You should be reasonably comfortable with most of the material in that overview 
 
 As proof of work, include an image such as the one below in your repo, that shows how in your own hub directory you have the right repository cloned and some of the files in it (this is taken from my account in the Hub):
 
-![](Pictures/stat159HW1Q4.jpg)
+![](Pictures/stat159HW1Q4.JPG)
 
 
 ## [5 points ] Git Practice: collaborating with yourself
