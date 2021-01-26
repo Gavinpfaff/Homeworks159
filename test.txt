@@ -1,1 +1,8 @@
 Text file created on my personal laptop.
+output free
+
+              total        used        free      shared  buff/cache   available
+Mem:       53481644    11275284     6491840       61992    35714520    41797096
+Swap:             0           0           0
+output pwd 
+
