@@ -6,5 +6,4 @@ Mem:       53481644    11275284     6491840       61992    35714520    41797096
 Swap:             0           0           0
 
 output pwd 
-
 /home/jovyan/GPHomework
