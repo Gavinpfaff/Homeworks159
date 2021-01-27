@@ -44,10 +44,11 @@ hypotheses are independent across hypotheses.
         - What is the chance of erroneously rejecting at least one of the null hypotheses?
             - Once again, we're looking for probability of a Type I error here, only this time we want to know the chance that at least one takes place which can be thought of as the complement of a Type I error never occurring which can be expressed as follows: $1-(1-\alpha)^N$
         - What is the chance of erroneously rejecting at least $k$ of the null hypotheses, $k=1, \ldots, N$?
-            - As this the case of a Type I error ammounts to a dichotomous "error or no error" sitution, this probability can be expressed by the Binomial distribution's PDF as follows. $P_1 = \sum_{k=1}^{N}{N \choose k} (1-\alpha)^{N-k} \alpha^k $
+            - As the case of a Type I error or not ammounts to a bernoulli trial, this probability can be expressed by the Binomial distribution's PDF as follows. $P_1 = \sum_{k=1}^{N}{N \choose k} (1-\alpha)^{N-k} \alpha^k $
     - Suppose $T$ of the null hypotheses are true and that the data used to test the hypotheses are independent
 across hypotheses.
         - What is the chance of erroneously rejecting at least $k$ of the true null hypotheses, $k=1, \ldots, N-T$?
+            - With independent data we can conceptualize the $T$ true null hypotheses as the number of Bernoulli trials and use and identical approach to what was employed for the previous question, that is: $P_1 = \sum_{k=1}^{N-T}{T \choose k} (1-alpha)^{T-K} \alpha^k$
     - Suppose all $N$ null hypotheses are true but that the data used to test the null hypotheses are not
 independent across hypotheses: their dependence is arbitrary.
         - What is the expected number of null hypotheses that will be rejected erroneously?
