@@ -33,15 +33,18 @@ $\bar{xy} \equiv \frac{1}{n} \sum_{j=1}^n x_j y_j$.
 ## [7 points] Hypothesis testing
 
 + What is the complete null hypothesis for a $Z$-test?
-
+    - $H_0 : \mu=\mu_0$ is the null for a two sided $Z$-test
 + Consider testing $N$ null hypotheses at significance level $\alpha$.
 Answer the following using closed-form expressions
 (not numbers).
     - Suppose all $N$ null hypotheses are true and that the data used to test the 
 hypotheses are independent across hypotheses.
         - What is the expected number of null hypotheses that will be rejected erroneously?
+            - In this case we are looking for the number of Type I errors over $N$ tests at a significance level $\alpha$. As the significance level can be conceptualized as the probability of a Type I error, the expected number of erroneously rejected nulls will be $(N*\alpha)$
         - What is the chance of erroneously rejecting at least one of the null hypotheses?
-        - What is the chance of erroneously rejecting at least $k$ of the null hypotheses, $k=1, \ldots, N?
+            - Once again, we're looking for probability of a Type I error here, only this time we want to know the chance that at least one takes place which can be thought of as the complement of a Type I error never occurring which can be expressed as follows: $1-(1-\alpha)^N$
+        - What is the chance of erroneously rejecting at least $k$ of the null hypotheses, $k=1, \ldots, N$?
+            - As this the case of a Type I error ammounts to a dichotomous "error or no error" sitution, this probability can be expressed by the Binomial distribution's PDF as follows. $P_1 = \sum_{k=1}^{N}{N \choose k} (1-\alpha)^{N-k} \alpha^k $
     - Suppose $T$ of the null hypotheses are true and that the data used to test the hypotheses are independent
 across hypotheses.
         - What is the chance of erroneously rejecting at least $k$ of the true null hypotheses, $k=1, \ldots, N-T$?
@@ -58,7 +61,7 @@ You should be reasonably comfortable with most of the material in that overview 
 
 As proof of work, include an image such as the one below in your repo, that shows how in your own hub directory you have the right repository cloned and some of the files in it (this is taken from my account in the Hub):
 
-![](Pictures/stat159HW1Q4.JPG)
+-See Stat159HW1Q4.jpg
 
 
 ## [5 points ] Git Practice: collaborating with yourself
