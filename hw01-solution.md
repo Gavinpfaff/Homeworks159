@@ -33,27 +33,28 @@ $\bar{xy} \equiv \frac{1}{n} \sum_{j=1}^n x_j y_j$.
 ## [7 points] Hypothesis testing
 
 + What is the complete null hypothesis for a $Z$-test?
-    - $H_0 : \mu=\mu_0$ is the null for a two sided $Z$-test, suitable for use on test statistics which are normally distributed 
+    - $H_0 : \mu=\mu_0$ is the null for a two sided $Z$-test, suitable for use on test statistics which are normally distributed (bring up the fact that its testing some function of data is standard normal)
 + Consider testing $N$ null hypotheses at significance level $\alpha$.
 Answer the following using closed-form expressions
 (not numbers).
     - Suppose all $N$ null hypotheses are true and that the data used to test the 
 hypotheses are independent across hypotheses.
         - What is the expected number of null hypotheses that will be rejected erroneously?
-            - In this case we are looking for the number of Type I errors over $N$ tests at a significance level $\alpha$. As the significance level can be conceptualized as the probability of a Type I error, but must be adjusted by the Bonferroni correction due to the presence of muliple tests to $\alpha/N$ the expected number of erroneously rejected nulls will be $(N*(\alpha/N))$, or simply $\alpha$
+            - In this case we are looking for the number of Type I errors over $N$ tests at a significance level $\alpha$. As the significance level can be conceptualized as the probability of a Type I error, the expected number of erroneously rejected nulls will be $(N*\alpha)$ 
         - What is the chance of erroneously rejecting at least one of the null hypotheses?
-            - Once again, we're looking for probability of a Type I error here, only this time we want to know the chance that at least one takes place which can be thought of as the complement of a Type I error never occurring and can be expressed(accounting for the Bonferroni correction) as follows: $1-(1-(\alpha/N))^N$
+            - Once again, we're looking for probability of a Type I error here, only this time we want to know the chance that at least one takes place which can be thought of as the complement of a Type I error never occurring over $N$ trials and can be expressed as follows: $1-(1-\alpha)^N$
         - What is the chance of erroneously rejecting at least $k$ of the null hypotheses, $k=1, \ldots, N$?
-            - As the case of a Type I error or not with independent tests ammounts to a bernoulli trial, this probability can be expressed by the Binomial distribution's PDF as follows. $P_1 = \sum_{k=1}^{N}{N \choose k} (1-(\alpha/N))^{N-k} (\alpha/N)^k $
+            - As the case of a Type I error or not with independent tests ammounts to a bernoulli trial, this probability can be expressed by the Binomial distribution's PDF as follows. $P_1 = \sum_{k=1}^{N}{N \choose k} (1-\alpha)^{N-k} \alpha^k $
     - Suppose $T$ of the null hypotheses are true and that the data used to test the hypotheses are independent
 across hypotheses.
         - What is the chance of erroneously rejecting at least $k$ of the true null hypotheses, $k=1, \ldots, N-T$?
-            - With independent data we can conceptualize the $T$ true null hypotheses as the number of Bernoulli trials and use an identical approach to what was employed for the previous question, that is: $P_1 = \sum_{k=1}^{N-T}{T \choose k} (1-(\alpha/N))^{T-K} (\alpha/N)^k$
+            - With independent data we can conceptualize the $T$ true null hypotheses as the number of Bernoulli trials and use an identical approach to what was employed for the previous question, that is: $P_1 = \sum_{k=1}^{N-T}{T \choose k} (1-\alpha)^{T-K} \alpha^k$
     - Suppose all $N$ null hypotheses are true but that the data used to test the null hypotheses are not
 independent across hypotheses: their dependence is arbitrary.
         - What is the expected number of null hypotheses that will be rejected erroneously?
+            - As the expected value is a linear operator, we can take an identical approach to taking the expectation of independent hypotheses: the expectation for each individual trial is $\alpha$, thus to find the expectation of $N$ hypothesis tests we simply need to sum $N$ $\alpha$'s together, leading to $N*\alpha$ as the expectation
         - Find a sharp upper bound on the chance of rejecting at least one null hypothesis.
-            - The Boneferroni inequality states that the probability of at least one of N trials being true is less than or equal to the sum of the probabilities of all trials being true. Knowing each probability of rejection is $\alpha/N$, we can see the sum of all N probabilites of erroneous rejection to be $/alpha$, providing us with a strict upper bound.
+            - The Boneferroni inequality states that the probability of at least one of N trials being true is less than or equal to the sum of the probabilities of all trials being true. Knowing each probability of rejection is $\alpha$, we can see the sum of all N probabilites of erroneous rejection to be $N*/alpha$, providing us with a strict upper bound for the probability of at least one Type I error taking place.
 ## [4 points] DataHub and Git Practice
 
 Log into the [class DataHub](https://stat159.datahub.berkeley.edu) with your campus credentials. Open a terminal and clone [this github repository that contains a "whirlwind tour" of Python for science](https://github.com/jakevdp/WhirlwindTourOfPython). Note that the same content can be viewed as a regular website [here](https://jakevdp.github.io/WhirlwindTourOfPython/index.html).
