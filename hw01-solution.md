@@ -47,14 +47,14 @@ hypotheses are independent across hypotheses.
             - As the case of a Type I error or not with independent tests ammounts to a bernoulli trial, this probability can be expressed by the Binomial distribution's PDF as follows. $P_1 = \sum_{k=1}^{N}{N \choose k} (1-\alpha)^{N-k} \alpha^k $
     - Suppose $T$ of the null hypotheses are true and that the data used to test the hypotheses are independent
 across hypotheses.
-        - What is the chance of erroneously rejecting at least $k$ of the true null hypotheses, $k=1, \ldots, N-T$?
-            - With independent data we can conceptualize the $T$ true null hypotheses as the number of Bernoulli trials and use an identical approach to what was employed for the previous question, that is: $P_1 = \sum_{k=1}^{N-T}{T \choose k} (1-\alpha)^{T-K} \alpha^k$
+        - What is the chance of erroneously rejecting at least $k$ of the true null hypotheses, $k=1, \ldots, T$?
+            - With independent data we can conceptualize the $T$ true null hypotheses as the number of Bernoulli trials and use an identical approach to what was employed for the previous question, that is: $P_1 = \sum_{k=1}^{T}{T \choose k} (1-\alpha)^{T-k} \alpha^k$
     - Suppose all $N$ null hypotheses are true but that the data used to test the null hypotheses are not
 independent across hypotheses: their dependence is arbitrary.
         - What is the expected number of null hypotheses that will be rejected erroneously?
             - As the expected value is a linear operator, we can take an identical approach to taking the expectation of independent hypotheses: the expectation for each individual trial is $\alpha$, thus to find the expectation of $N$ hypothesis tests we simply need to sum $N$ $\alpha$'s together, leading to $N*\alpha$ as the expectation
         - Find a sharp upper bound on the chance of rejecting at least one null hypothesis.
-            - The Boneferroni inequality states that the probability of at least one of N trials being true is less than or equal to the sum of the probabilities of all trials being true. Knowing each probability of rejection is $\alpha$, we can see the sum of all N probabilites of erroneous rejection to be $N*/alpha$, providing us with a strict upper bound for the probability of at least one Type I error taking place.
+            - The Boneferroni inequality states that the probability of at least one of N trials being true is less than or equal to the sum of the probabilities of all trials being true. Knowing each probability of rejection is $\alpha$, we can see the sum of all N probabilites of erroneous rejection to be $N*\alpha$, providing us with a strict upper bound for the probability of at least one Type I error taking place.
 ## [4 points] DataHub and Git Practice
 
 Log into the [class DataHub](https://stat159.datahub.berkeley.edu) with your campus credentials. Open a terminal and clone [this github repository that contains a "whirlwind tour" of Python for science](https://github.com/jakevdp/WhirlwindTourOfPython). Note that the same content can be viewed as a regular website [here](https://jakevdp.github.io/WhirlwindTourOfPython/index.html).
