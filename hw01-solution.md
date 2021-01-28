@@ -33,7 +33,7 @@ $\bar{xy} \equiv \frac{1}{n} \sum_{j=1}^n x_j y_j$.
 ## [7 points] Hypothesis testing
 
 + What is the complete null hypothesis for a $Z$-test?
-    - $H_0 : \mu=\mu_0$ is the null for a two sided $Z$-test, suitable for use on test statistics which are normally distributed (bring up the fact that its testing some function of data is standard normal)
+    - $H_0 : \mu=\mu_0$ is the null for a two sided $Z$-test, suitable for use on test statistics which are  standard normally distributed and essentially tests that some function of the observed data takes a standard normal distribution.
 + Consider testing $N$ null hypotheses at significance level $\alpha$.
 Answer the following using closed-form expressions
 (not numbers).
